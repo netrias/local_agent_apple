@@ -22,8 +22,6 @@ This sets up the whole stack in one pass:
 3. Downloads and mounts the **oMLX** `.dmg`, ready to copy into `/Applications`
 4. Installs the latest LTS Node via nvm, updates npm, and installs the **pi** coding agent plus its `pi-smart-web-search` and `pi-smart-fetch` extensions
 
-Lines are commented out for steps you've already done on a given machine (e.g. `cp` of the oMLX `.app`, or the `pi` installer itself) — uncomment as needed if setting up a fresh box. Safe to re-run; each step is idempotent (Homebrew/nvm/pi all skip or update in place if already installed).
-
 ## Downloading a model into the oMLX cache
 
 oMLX's server (`omlx serve`) discovers models from subdirectories of a model directory — **`~/.omlx/models` by default**. Each subdirectory name becomes the model's ID, and must contain a `config.json` plus its `*.safetensors` weight files:
