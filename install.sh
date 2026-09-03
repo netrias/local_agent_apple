@@ -24,7 +24,7 @@ curl -sSL -o oMLX-0.6.4-macos26-27.dmg https://github.com/jundot/omlx/releases/d
 VOLUME=$(hdiutil attach oMLX-0.6.4-macos26-27.dmg | tail -n 1 | awk -F'\t' '{print $NF}')
 echo "Mounted at: $VOLUME"
 echo "Copying the application..."
-#cp -Rp "$VOLUME"/*.app /Applications/
+cp -Rp "$VOLUME"/*.app /Applications/
 echo "Unmounting and cleaning up oMLX image..."
 hdiutil detach "$VOLUME"
 echo "oMLX installation complete!"
@@ -35,7 +35,7 @@ nvm use --lts
 nvm alias default 'lts/*'
 npm install -g npm@latest
 echo "Node $(node -v) / npm $(npm -v) active."
-#curl -fsSL https://pi.dev/install.sh | sh
+curl -fsSL https://pi.dev/install.sh | sh
 pi install npm:pi-smart-web-search
 pi install npm:pi-smart-fetch
 echo "Stack installation complete!"
