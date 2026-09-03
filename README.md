@@ -19,7 +19,7 @@ This sets up the whole stack in one pass:
 
 1. Installs/updates **Homebrew**
 2. Installs **nvm** via Homebrew and sources it properly into the shell (also appends the nvm init lines to `~/.zshrc` so new shells pick it up) — this is required because `pi`'s extensions need a current Node/npm, and a bare `brew install nvm` doesn't put `nvm` on your PATH by itself
-3. Downloads and mounts the **oMLX** `.dmg`, ready to copy into `/Applications`
+3. Downloads and mounts the **oMLX** `.dmg`, copies into `/Applications`
 4. Installs the latest LTS Node via nvm, updates npm, and installs the **pi** coding agent plus its `pi-smart-web-search` and `pi-smart-fetch` extensions
 
 ## Downloading a model into the oMLX cache
